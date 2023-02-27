@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.keyword_survey.KeyWordSurveyFragment">
+
+    <TextView
+        android:id="@+id/surveyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Key Word Survey"
+        android:textColor="@color/colorText_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/keywordSurveyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surveyTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            >
+
+            <EditText
+                android:id="@+id/etCategory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_form_height"
+                android:background="@drawable/bg_edit_text"
+                android:focusable="false"
+                android:hint="Select Category"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/cd"
+                app:layout_constraintEnd_toEndOf="@id/etCategory"
+                app:layout_constraintTop_toTopOf="@id/etCategory"
+                app:layout_constraintBottom_toBottomOf="@id/etCategory"
+                app:srcCompat="@drawable/ic_arrow_drop_down"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/etCategory"
+                app:layout_constraintTop_toTopOf="@id/etCategory"
+                app:layout_constraintBottom_toBottomOf="@id/etCategory"
+                android:layout_marginEnd="16dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/etSubCategoryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <EditText
+                android:id="@+id/etSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_form_height"
+                android:background="@drawable/bg_edit_text"
+                android:focusable="false"
+                android:hint="Select Sub Category"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/cd"
+                app:layout_constraintEnd_toEndOf="@id/etSubCategory"
+                app:layout_constraintTop_toTopOf="@id/etSubCategory"
+                app:layout_constraintBottom_toBottomOf="@id/etSubCategory"
+                app:srcCompat="@drawable/ic_arrow_drop_down"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/etSubSubCategoryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <EditText
+                android:id="@+id/etSubSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_form_height"
+                android:background="@drawable/bg_edit_text"
+                android:focusable="false"
+                android:hint="Select Sub Sub Category"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/cd"
+                app:layout_constraintEnd_toEndOf="@id/etSubSubCategory"
+                app:layout_constraintTop_toTopOf="@id/etSubSubCategory"
+                app:layout_constraintBottom_toBottomOf="@id/etSubSubCategory"
+                app:srcCompat="@drawable/ic_arrow_drop_down"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/possibleKeyWordEng"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/leave_form_height"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="top"
+            android:hint="Possible Key Word English. Use (,) if multiple."
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:minLines="5"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:visibility="visible"
+            />
+
+        <EditText
+            android:id="@+id/possibleKeyWordBan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/leave_form_height"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="top"
+            android:hint="বাংলায় লিখুন. একের অধিক হলে (,) ব্যবহার করুন ।"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:minLines="5"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitBtn"
+        android:layout_width="180dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/green"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keywordSurveyLayout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

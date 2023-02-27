@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/copyText"
+        android:title="Copy"/>
+
+    <item
+        android:id="@+id/complainDT"
+        android:title="Complain"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/trackDt"
+        android:title="Order History"
+        android:visible="true"/>
+
+</menu>

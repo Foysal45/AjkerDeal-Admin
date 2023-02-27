@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:contentPadding="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/companyNameInstantPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_14"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Jochnatori Online shop" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mobileNumberLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/call_btn_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/mobileLogo"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="3dp"
+                    android:contentDescription="@string/cd"
+                    android:src="@drawable/ic_call"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/mobileTelesale"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mobileTelesale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="1dp"
+                    android:text="01772248149"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mobileLogo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/companyNameInstantPayment" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                app:barrierDirection="right"
+                app:constraint_referenced_ids="key1,key2,key3" />
+
+            <TextView
+                android:id="@+id/key1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Active"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/black_80"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator" />
+
+            <TextView
+                android:id="@+id/isActiveInstantPayment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/black_80"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator"
+                tools:text="25 July, 2019" />
+
+            <TextView
+                android:id="@+id/key2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bkash Number"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/black_80"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/key1" />
+
+            <TextView
+                android:id="@+id/bkashNumberInstantPayment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/black_80"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/barrier"
+                app:layout_constraintTop_toBottomOf="@id/isActiveInstantPayment"
+                tools:text="01555555555" />
+
+            <TextView
+                android:id="@+id/key3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/black_80"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/key2"
+               />
+
+            <TextView
+                android:id="@+id/emailAddressInstantPayment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/black_80"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/barrier"
+                app:layout_constraintTop_toBottomOf="@id/bkashNumberInstantPayment"
+                tools:text="abcd@gmail.com"
+              />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

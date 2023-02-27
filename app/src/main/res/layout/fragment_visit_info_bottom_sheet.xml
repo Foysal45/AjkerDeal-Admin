@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="Visited Information"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp">
+
+        <EditText
+            android:id="@+id/gpsLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/leave_form_height"
+            android:background="@drawable/bg_spinner"
+            android:drawableEnd="@drawable/ic_arrow_drop_down"
+            android:focusable="false"
+            android:hint="GPS Location"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/gpsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/cd"
+            app:layout_constraintBottom_toBottomOf="@id/gpsLocation"
+            app:layout_constraintEnd_toEndOf="@id/gpsLocation"
+            app:layout_constraintTop_toTopOf="@id/gpsLocation"
+            app:srcCompat="@drawable/ic_location"
+            app:tint="#9ca5b4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/visitSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/bg_edit_text"
+        android:gravity="top"
+        android:hint="Write Visited Summary"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        android:visibility="visible"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green" />
+
+
+</LinearLayout>

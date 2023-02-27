@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="পিকআপ লোকেশন আপডেট"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/districtSelect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_view_height"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_add_order_edit_text"
+
+                android:enabled="false"
+                android:hint="জেলা নির্বাচন করুন"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                android:visibility="visible"
+                tools:visibility="visible"
+                />
+
+            <EditText
+                android:id="@+id/thanaSelect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_view_height"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_add_order_edit_text"
+                android:enabled="false"
+                android:hint="থানা/এরিয়া নির্বাচন করুন"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                android:visibility="visible"
+                tools:visibility="visible"
+                />
+
+            <EditText
+                android:id="@+id/pickupAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_add_order_edit_text"
+                android:gravity="start|top"
+                android:hint="বিস্তারিত পিকআপ ঠিকানা লিখুন"
+                android:importantForAutofill="no"
+                android:minHeight="96dp"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/pickupContact"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_view_height"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_add_order_edit_text"
+                android:hint="মোবাইল নাম্বার"
+                android:maxLength="11"
+                android:importantForAutofill="no"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                android:inputType="phone" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updatePickupBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="@dimen/text_14"
+                android:text="আপডেট পিকআপ লোকেশন"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

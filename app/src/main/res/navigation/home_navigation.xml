@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/nav_dashboard"
+    >
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.home.HomeFragment"
+        android:label="@string/dashboard"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/nav_dt_complain_list"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.complain_dt.DtComplainListFragment"
+        android:label="@string/complain"
+        tools:layout="@layout/fragment_dt_complain_list">
+        <action
+            android:id="@+id/action_nav_dt_complain_list_to_updateDtComplain"
+            app:destination="@id/updateDtComplain" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_dt_complain"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.complain_dt.ComplainFragment"
+        android:label="@string/complain"
+        tools:layout="@layout/fragment_complain"/>
+
+    <fragment
+        android:id="@+id/nav_attendance_report"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.attendance_report.AttendanceReportFragment"
+        android:label="@string/report_attendance"
+        tools:layout="@layout/fragment_attendance_report"/>
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.notification.NotificationPreviewFragment"
+        android:label="@string/notification"
+        tools:layout="@layout/fragment_notification_preview"/>
+
+
+    <fragment
+        android:id="@+id/nav_instant_payment_information"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.instant_payment_information.InstantPaymentInformationFragment"
+        android:label="@string/instant_payment_information"
+        tools:layout="@layout/fragment_instant_payment_information"/>
+
+    <fragment
+        android:id="@+id/nav_order_report"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.order_report.order.OrderReportListFragment"
+        android:label="@string/order_report"
+        tools:layout="@layout/fragment_order_report_list"/>
+
+    <fragment
+        android:id="@+id/nav_merchant_list"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.order_report.order_merchants.OrderWiseMerchantListFragment"
+        android:label="@string/order_wise_merchant"
+        tools:layout="@layout/fragment_order_wise_merchant_list"/>
+
+    <fragment
+        android:id="@+id/nav_order_details"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.order_report.merchant_order_details.MerchantOrderDetailsFragment"
+        android:label="@string/order_details"
+        tools:layout="@layout/fragment_order_wise_merchant_list"/>
+
+    <fragment
+        android:id="@+id/nav_remainder"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.reminder.RemainderFragment"
+        android:label="@string/remainder"
+        tools:layout="@layout/fragment_remainder"/>
+
+    <fragment
+        android:id="@+id/nav_leave"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.employee_leave.LeaveStatementFragment"
+        android:label="@string/leave"
+        tools:layout="@layout/fragment_leave_statement"/>
+
+    <fragment
+        android:id="@+id/nav_leave_application_form"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.employee_leave.LeaveApplicationFormFragment"
+        android:label="@string/leave"
+        tools:layout="@layout/fragment_leave_application_form"/>
+
+    <fragment
+        android:id="@+id/nav_retention_merchant"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.retention.RetentionManagerListFragment"
+        android:label="@string/retention"
+        tools:layout="@layout/fragment_retention_manager_list">
+        <action
+            android:id="@+id/action_nav_retention_merchant_to_allOrdersFragment"
+            app:destination="@id/allOrdersFragment" />
+        <action
+            android:id="@+id/action_nav_retention_merchant_to_loanSurveyFragment"
+            app:destination="@id/loanSurveyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_webview"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.webview.WebViewFragment"
+        android:label="@string/webView"
+        tools:layout="@layout/fragment_web_view"/>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/nav_leave_report"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.leave_report.report.LeaveReportFragment"
+        android:label="@string/report_leave"
+        tools:layout="@layout/fragment_leave_report"/>
+
+    <fragment
+        android:id="@+id/nav_leave_report_details"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.leave_report.details.LeaveReportDetailsFragment"
+        android:label="@string/report_details_leave"
+        tools:layout="@layout/fragment_leave_report_details"/>
+
+    <fragment
+        android:id="@+id/nav_key_word_survey"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.keyword_survey.KeyWordSurveyFragment"
+        android:label="@string/key_word_survey"
+        tools:layout="@layout/fragment_key_word_survey"/>
+
+    <fragment
+        android:id="@+id/nav_operation_menu"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.operation.operation_menu.OperationMenuFragment"
+        android:label="@string/operation_menu"
+        tools:layout="@layout/fragment_operation_menu">
+
+        <action android:id="@+id/nav_operationMenu_operation"
+            app:destination="@id/nav_operation"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_operation"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.operation.OperationFragment"
+        android:label="@string/operation"
+        tools:layout="@layout/fragment_operation"/>
+    <fragment
+        android:id="@+id/nav_retention_report"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.retention_report.RetentionReportFragment"
+        android:label="Retention Report"
+        tools:layout="@layout/fragment_retention_report" />
+
+
+    <fragment
+        android:id="@+id/telesalesMenu"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.telesales_active_merchant.TeleSalesActiveMerchantFragment"
+        android:label="TeleSales"
+        tools:layout="@layout/fragment_tele_sales_active_merchant" >
+        <action
+            android:id="@+id/action_telesalesMenu_to_teleSalesDetailsFragment"
+            app:destination="@id/teleSalesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/merchantInformation"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.merchant_information.MerchantInformationFragmentList"
+        android:label="Merchant Information"
+        tools:layout="@layout/fragment_merchant_info_update_list" >
+
+        <action
+            android:id="@+id/action_merchantInformation_to_merchantInformationUpdateFragment"
+            app:destination="@id/merchantInformationUpdateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/merchantInformationUpdateFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.merchant_information.merchant_info_update.MerchantInformationUpdateFragment"
+        android:label="Merchant Information Update"
+        tools:layout="@layout/fragment_merchant_information_update" />
+
+    <fragment
+        android:id="@+id/merchantComplainListFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.complain_dt.merchant_complain_list.MerchantComplainFragment"
+        android:label="Merchant Complain Lists"
+        tools:layout="@layout/fragment_merchant_complain_list" >
+        <action
+            android:id="@+id/action_merchantComplainListFragment_to_updateMerchantComplain"
+            app:destination="@id/updateMerchantComplain" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateMerchantComplain"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.complain_dt.merchant_complain_list.UpdateMerchantComplain"
+        android:label="UpdateMerchantComplain"
+        tools:layout="@layout/fragment_update_merchant_complain"
+        />
+
+    <fragment
+        android:id="@+id/updateDtComplain"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.complain_dt.update_dt_complain.UpdateDtComplain"
+        android:label="fragment_update_dt_complain"
+        tools:layout="@layout/fragment_update_dt_complain" />
+
+    <fragment
+        android:id="@+id/nav_chat_sr"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.retention_users_chat.RetentionUsersListFragment"
+        android:label="@string/srChatDetails"
+        tools:layout="@layout/fragment_retention_users_list" />
+    <fragment
+        android:id="@+id/nav_chat_rider"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.riders_chat.RidersFragment"
+        android:label="@string/riderChatDetails" />
+
+    <fragment
+        android:id="@+id/nav_chat_operation"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.return_accounts_complain_chat.ReturnAccountsComplainFragment"
+        android:label="Chat History" />
+
+    <fragment
+        android:id="@+id/complainReportFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.operation.complain_report.ComplainReportFragment"
+        android:label="Complain Report"
+        tools:layout="@layout/fragment_complain_report" >
+        <action
+            android:id="@+id/action_complainReportFragment_to_complainDetailsFragment"
+            app:destination="@id/complainDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/complainDetailsFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.operation.complain_report.ComplainDetailsFragment"
+        android:label="Complain Report Details" />
+
+    <fragment
+        android:id="@+id/contact_info"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.contact_info.ContactInfoFragment"
+        android:label="All Contacts" />
+    <fragment
+        android:id="@+id/allOrdersFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.retention.all_orders.AllOrdersFragment"
+        android:label="All Orders"
+        tools:layout="@layout/fragment_all_orders" />
+
+    <fragment
+        android:id="@+id/loanSurveyFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.loan_survey.LoanSurveyFragment"
+        android:label="LoanSurveyFragment" />
+
+    <fragment
+        android:id="@+id/loanSurveyReportFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.loan_survey_report.LoanSurveyReportFragment"
+        android:label="Loan Survey Report"
+        tools:layout="@layout/fragment_loan_survey_report" >
+        <action
+            android:id="@+id/action_loanSurveyReportFragment_to_loanSurveyReportDetailsFragment"
+            app:destination="@id/loanSurveyReportDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loanSurveyReportDetailsFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.loan_survey_report.LoanSurveyReportDetailsFragment"
+        android:label="fragment_loan_survey_report_details"
+        tools:layout="@layout/fragment_loan_survey_report_details" />
+    <fragment
+        android:id="@+id/teleSalesDetailsFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.telesales_active_merchant.TeleSalesDetailsFragment"
+        android:label="fragment_tele_sales_details"
+        tools:layout="@layout/fragment_tele_sales_details" />
+    <fragment
+        android:id="@+id/postShipmentChatFragment"
+        android:name="com.ajkerdeal.app.ajkerdealadmin.ui.post_shipment_chat.PostShipmentChatFragment"
+        android:label="Chat to Merchants"
+        tools:layout="@layout/fragment_post_shipment_chat" />
+
+</navigation>

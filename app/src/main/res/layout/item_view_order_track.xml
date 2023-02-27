@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/statusImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:contentDescription="@string/cd"
+        android:src="@drawable/order_track_check_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/statusName"
+        />
+
+    <View
+        android:id="@+id/verticalView"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="#BCBEC0"
+        app:layout_constraintBottom_toTopOf="@id/statusImage"
+        app:layout_constraintEnd_toEndOf="@id/statusImage"
+        app:layout_constraintStart_toStartOf="@id/statusImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/verticalView1"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="#BCBEC0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/statusImage"
+        app:layout_constraintStart_toStartOf="@id/statusImage"
+        app:layout_constraintTop_toBottomOf="@id/statusImage" />
+
+
+    <TextView
+        android:id="@+id/statusName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="46dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#231F20"
+        android:textIsSelectable="true"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/statusImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="রিটার্ন পার্সেল সেন্ট্রাল ওয়্যার হাউসে আছে" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:maxLines="1"
+        android:textColor="#58595B"
+        android:textIsSelectable="true"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/statusImage"
+        app:layout_constraintTop_toBottomOf="@id/statusName"
+        tools:text="10:50 AM" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:maxLines="1"
+        android:textColor="#58595B"
+        android:textIsSelectable="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/time"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@id/time"
+        tools:text="৯৯ ফেব্রুয়ারী" />
+
+
+    <TextView
+        android:id="@+id/commentedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:maxLines="1"
+        android:textColor="#58595B"
+        android:textIsSelectable="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/mobileNumber"
+        app:layout_constraintStart_toEndOf="@id/statusImage"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        tools:text="Commented By: Maksud Mubin" />
+
+    <TextView
+        android:id="@+id/mobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_phone_number"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:paddingStart="6dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textIsSelectable="true"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_call_small"
+        app:layout_constraintBottom_toTopOf="@+id/dcMobileNumber"
+        app:layout_constraintStart_toEndOf="@id/statusImage"
+        app:layout_constraintTop_toBottomOf="@+id/commentedBy"
+        tools:text="01555555555"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/dcMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_phone_number"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:paddingStart="6dp"
+        android:paddingTop="2dp"
+        android:textIsSelectable="true"
+        android:paddingEnd="6dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_call_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/statusImage"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNumber"
+        tools:text="01555555555"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

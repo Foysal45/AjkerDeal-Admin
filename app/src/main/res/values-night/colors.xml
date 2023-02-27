@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#667AFF</color>
+    <color name="background">#252C4B</color>
+    <color name="card_background">#27325F</color>
+    <color name="colorText_primary">#FFFFFF</color>
+    <color name="colorText_secondary">#797F95</color>
+    <color name="colorHint">#4DFFFFFF</color>
+    <color name="navHeader">@color/colorPrimary</color>
+    <color name="spinner_background">#12FFFFFF</color>
+
+</resources>

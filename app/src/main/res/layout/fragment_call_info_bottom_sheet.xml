@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        tools:text="Call Information"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerCalledNumber"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_spinner"
+            android:overlapAnchor="false"
+            android:spinnerMode="dropdown"
+            android:theme="@style/custom_spinner_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:entries="@array/spinner_array_collection_location" />
+
+        <EditText
+            android:id="@+id/otherMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/leave_form_height"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_spinner"
+            android:hint="Other mobile number"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:textIsSelectable="true"
+            android:maxLength="11"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCalledNumber"
+            />
+
+        <EditText
+            android:id="@+id/callDuration"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/leave_form_height"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_spinner"
+            android:hint="Call duration in Minute (example: 5)"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/otherMobileNumber"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/cd"
+            app:layout_constraintBottom_toBottomOf="@id/spinnerCalledNumber"
+            app:layout_constraintEnd_toEndOf="@id/spinnerCalledNumber"
+            app:layout_constraintTop_toTopOf="@id/spinnerCalledNumber"
+            app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/callSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/bg_edit_text"
+        android:gravity="top"
+        android:hint="Write Call Summary"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        android:visibility="visible"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green" />
+
+
+</LinearLayout>

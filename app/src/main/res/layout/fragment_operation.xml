@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_dodgeInsetEdges="bottom">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/operationType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:itemCount="2"
+        tools:listitem="@layout/item_view_barcode_info" />
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No parcel added yet"
+        android:textColor="@color/colorText_primary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <RadioGroup
+        android:id="@+id/operationType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/spinnerHubFrom">
+
+        <RadioButton
+            android:id="@+id/operationReceiveSend"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:checked="true"
+            android:text="Receive &#38; Send"
+            android:textColor="@color/colorText_primary"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/operationReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:text="Receive"
+            android:textColor="@color/colorText_primary"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/operationSend"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:text="Send"
+            android:textColor="@color/colorText_primary"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerHubFrom"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_spinner"
+        android:entries="@array/hub_from"
+        android:overlapAnchor="false"
+        android:spinnerMode="dropdown"
+        android:theme="@style/custom_spinner_style"
+        app:layout_constraintBottom_toTopOf="@id/updateBtn"
+        app:layout_constraintEnd_toStartOf="@id/spinnerHubTo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/cd"
+        app:layout_constraintBottom_toBottomOf="@id/spinnerHubFrom"
+        app:layout_constraintEnd_toEndOf="@id/spinnerHubFrom"
+        app:layout_constraintTop_toTopOf="@id/spinnerHubFrom"
+        app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerHubTo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_spinner"
+        android:entries="@array/hub_to"
+        android:overlapAnchor="false"
+        android:spinnerMode="dropdown"
+        android:theme="@style/custom_spinner_style"
+        app:layout_constraintBottom_toTopOf="@id/updateBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerHubFrom" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/cd"
+        app:layout_constraintBottom_toBottomOf="@id/spinnerHubTo"
+        app:layout_constraintEnd_toEndOf="@id/spinnerHubTo"
+        app:layout_constraintTop_toTopOf="@id/spinnerHubTo"
+        app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateBtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:icon="@drawable/ic_cloud_upload"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/scanBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scanBtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textAllCaps="false"
+        app:layout_constraintHorizontal_weight="1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:backgroundTint="@color/colorComplain"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_qrcode"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dtCodeInput"
+        app:layout_constraintStart_toEndOf="@id/updateBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dtCodeInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:backgroundTint="@color/red"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_edit"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/scanBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

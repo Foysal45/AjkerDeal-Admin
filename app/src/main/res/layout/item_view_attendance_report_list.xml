@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:contentPadding="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/employeeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/employeeId"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Employee" />
+
+        <TextView
+            android:id="@+id/employeeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/employeeName"
+            app:layout_constraintEnd_toStartOf="@id/workPlace"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="(99999)" />
+
+        <TextView
+            android:id="@+id/workPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Home" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/separator"
+            app:layout_constraintTop_toBottomOf="@id/employeeName" />
+
+        <TextView
+            android:id="@+id/key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Work start"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/startWorkTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key"
+            tools:text="10:00:00 AM" />
+
+        <TextView
+            android:id="@+id/key1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Work duration"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startWorkTime" />
+
+        <TextView
+            android:id="@+id/workHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key1"
+            tools:text="0 hours, 0 minutes" />
+
+        <TextView
+            android:id="@+id/key02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End work"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/endWorkTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key"
+            tools:text="06:00:00 PM" />
+
+        <TextView
+            android:id="@+id/key2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Break duration"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/endWorkTime" />
+
+        <TextView
+            android:id="@+id/breakHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key1"
+            tools:text="0 hours, 0 minutes" />
+
+        <TextView
+            android:id="@+id/key3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Work summary"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breakHour" />
+
+        <TextView
+            android:id="@+id/workSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="2dp"
+            android:textColor="@color/black_90"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key3"
+            android:maxLines="10"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

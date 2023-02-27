@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.employee_leave.LeaveApplicationFormFragment"
+    android:overScrollMode="never"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/formTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Leave Application Form"
+            android:textColor="@color/colorText_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/formLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formTitle"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerLeaveType"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_spinner"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/custom_spinner_style"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:entries="@array/spinner_array_collection_location" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/cd"
+                    app:layout_constraintBottom_toBottomOf="@id/spinnerLeaveType"
+                    app:layout_constraintEnd_toEndOf="@id/spinnerLeaveType"
+                    app:layout_constraintTop_toTopOf="@id/spinnerLeaveType"
+                    app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/othersLeaveType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_form_height"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_spinner"
+                android:hint="Other leave type"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+            <TextView
+                android:id="@+id/dateRangePicker"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_form_height"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_spinner"
+                android:hint="Leave Duration"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_90"
+                android:textColorHint="@color/gray_500"
+                android:textSize="@dimen/text_14"
+                app:drawableEndCompat="@drawable/ic_date"
+                app:drawableTint="@color/gray_500"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_height="@dimen/leave_form_height"
+                >
+
+                <TextView
+                    android:id="@+id/datePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/leave_form_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:layout_marginEnd="4dp"
+                    android:hint="Resumption"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/black_90"
+                    android:textColorHint="@color/gray_500"
+                    android:textSize="@dimen/text_14"
+                    app:drawableEndCompat="@drawable/ic_date"
+                    app:drawableTint="@color/gray_500"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerDepartmentType"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_spinner"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/custom_spinner_style"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:entries="@array/spinner_array_collection_location" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/cd"
+                        app:layout_constraintBottom_toBottomOf="@id/spinnerDepartmentType"
+                        app:layout_constraintEnd_toEndOf="@id/spinnerDepartmentType"
+                        app:layout_constraintTop_toTopOf="@id/spinnerDepartmentType"
+                        app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--    <EditText
+                    android:id="@+id/etDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/leave_form_height"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_spinner"
+                    android:hint="Department"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/black_80"
+                    android:textSize="@dimen/text_14"
+                    />-->
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etEmployeeName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_form_height"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_spinner"
+                android:hint="Employee Name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:enabled="false"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                />
+
+            <EditText
+                android:id="@+id/etEmployeeMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leave_form_height"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:background="@drawable/bg_spinner"
+                android:hint="Mobile Number"
+                android:enabled="false"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                />
+
+            <EditText
+                android:id="@+id/leaveReasonTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text"
+                android:gravity="top"
+                android:hint="Purpose for the leave Ex. Family issue"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                android:visibility="visible"
+                />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/applyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green"
+            android:text="Apply"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/formLayout"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

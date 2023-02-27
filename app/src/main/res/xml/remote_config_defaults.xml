@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>admin_appVersion</key>
+        <value>1</value>
+    </entry>
+    <entry>
+        <key>admin_appUpdateUrl</key>
+        <value>null</value>
+    </entry>
+    <entry>
+        <key>admin_loginSession</key>
+        <value>0</value>
+    </entry>
+</defaultsMap>

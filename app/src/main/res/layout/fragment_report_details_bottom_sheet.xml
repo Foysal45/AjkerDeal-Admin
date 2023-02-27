@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/employeeInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="14dp">
+
+        <TextView
+            android:id="@+id/employeeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/employeeId"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Employee" />
+
+        <TextView
+            android:id="@+id/employeeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/employeeName"
+            app:layout_constraintEnd_toStartOf="@id/workPlace"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="(99999)" />
+
+        <TextView
+            android:id="@+id/workPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Home" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/separator"
+            app:layout_constraintTop_toBottomOf="@id/employeeName" />
+
+
+        <TextView
+            android:id="@+id/key1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Work duration"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/workHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key1"
+            tools:text="0 hours, 0 minutes" />
+
+        <TextView
+            android:id="@+id/key2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Break duration"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/breakHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key1"
+            tools:text="0 hours, 0 minutes" />
+
+        <TextView
+            android:id="@+id/reportDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Date: "
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breakHour" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employeeInfoLayout"
+        android:overScrollMode="never"
+        tools:itemCount="2"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_view_report_session_list"
+        tools:orientation="vertical" />
+
+</LinearLayout>

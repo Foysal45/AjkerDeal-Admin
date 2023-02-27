@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:contentPadding="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/leaveDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="01-01-2021" />
+
+        <TextView
+            android:id="@+id/leaveStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Pending" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/separator"
+            app:layout_constraintTop_toBottomOf="@id/leaveDate" />
+
+        <TextView
+            android:id="@+id/key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/employeeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key"
+            tools:text="Sifat" />
+
+        <TextView
+            android:id="@+id/key1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave Type: "
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/employeeName" />
+
+        <TextView
+            android:id="@+id/leaveType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key1"
+            tools:text="Sick Leave" />
+
+        <TextView
+            android:id="@+id/key2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purpose for the leave:"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leaveType" />
+
+        <LinearLayout
+            android:id="@+id/leaveReasonAndJoiningDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/key2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/leaveReason"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:maxLines="5"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key2"
+                tools:text="Head and body pain" />
+
+            <TextView
+                android:id="@+id/joiningDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintBottom_toTopOf="@+id/recommendActionLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/key4"
+                tools:text="01 may 2021" />
+
+        </LinearLayout>
+
+        <!--<TextView
+            android:id="@+id/leaveReason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:gravity="start"
+            android:maxLines="5"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key2"
+            tools:text="Head and body pain" />-->
+
+        <TextView
+            android:id="@+id/key5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Department:"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/key"
+            tools:text="IT" />
+
+        <TextView
+            android:id="@+id/key3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration:"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/department" />
+
+        <TextView
+            android:id="@+id/leaveDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/key1"
+            tools:text="01 may - 3 may" />
+
+        <TextView
+            android:id="@+id/key4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resumption Date:"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leaveDuration" />
+
+        <!--<TextView
+            android:id="@+id/joiningDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="2"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintBottom_toTopOf="@+id/recommendActionLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/key4"
+            tools:text="01 may 2021" />-->
+
+        <LinearLayout
+            android:id="@+id/leaveActionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leaveReasonAndJoiningDate"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <Button
+                android:id="@+id/rejectBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/red"
+                android:text="Reject"/>
+
+
+            <Button
+                android:id="@+id/approveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green"
+                android:layout_marginStart="4dp"
+                android:text="Approve"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recommendActionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leaveReasonAndJoiningDate"
+            tools:visibility="visible">
+
+            <Button
+                android:id="@+id/recommendRejectBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/red"
+                android:text="Reject" />
+
+
+            <Button
+                android:id="@+id/recommendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/green"
+                android:text="Recommend" />
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <!--<Button
+            android:id="@+id/recommendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="Recommend"
+            app:layout_constraintEnd_toStartOf="@+id/leaveActionLayout"
+            app:layout_constraintTop_toBottomOf="@+id/leaveReason"
+            android:visibility="gone"
+            tools:visibility="visible"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/countAndMapLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="রিটার্ন পার্সেল ডেলিভারি টাইগারের লালমাটিয়া ওয়্যার হাউসে আছে" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/countAndMapLayout"
+        android:layout_width="96dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_return_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/countTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/black_90"
+            android:textSize="22sp"
+            android:includeFontPadding="false"
+            tools:text="99"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/mapBtn"
+            android:background="@color/colorPrimary"/>
+
+        <ImageView
+            android:id="@+id/mapBtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/cd"
+            android:padding="4dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/orange"
+            tools:src="@drawable/ic_location1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

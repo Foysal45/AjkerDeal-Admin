@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.merchant_information.merchant_info_update.MerchantInformationUpdateFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Update Your Complain"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/profileEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/answerByLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Answer By">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/answerBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#CDE0E0E0"
+                    android:enabled="false"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="yes"
+                    android:inputType="text"
+                    android:textColor="@color/black_80"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bookingCodeLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Booking Code">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bookingCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#CDE0E0E0"
+                    android:enabled="false"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="yes"
+                    android:inputType="text"
+                    android:textColor="@color/black_80"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Full Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black_80"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/assignedToLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Assigned To">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/assignedTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#CDE0E0E0"
+                    android:enabled="false"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:textColor="@color/black_80"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerComplainType"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/login_view_height"
+                    android:background="@drawable/bg_stroke3"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/custom_spinner_style"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:entries="@array/spinner_array_collection_location" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/cd"
+                    app:layout_constraintBottom_toBottomOf="@id/spinnerComplainType"
+                    app:layout_constraintEnd_toEndOf="@id/spinnerComplainType"
+                    app:layout_constraintTop_toTopOf="@id/spinnerComplainType"
+                    app:srcCompat="@drawable/ic_arrow_drop_down" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/commentsLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Comments">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/commentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:gravity="left|top"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="1000"
+                    android:maxLines="5"
+                    android:minLines="3"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="@color/black_80"
+                    android:textSize="14sp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="1000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/statusCheckedRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileEditLayout">
+
+            <RadioButton
+                android:id="@+id/checkIssueSolved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solved"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_14" />
+
+            <RadioButton
+                android:id="@+id/checkIssuePending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:layout_marginHorizontal="@dimen/text_12"
+                android:textColor="@color/red_900"
+                android:textSize="@dimen/text_14"/>
+
+        </RadioGroup>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/updateBtn"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/action_color"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusCheckedRadioGroup" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

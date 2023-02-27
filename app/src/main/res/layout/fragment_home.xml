@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:id="@+id/swipeRefresh"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_50"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/cd"
+                android:src="@drawable/ic_person_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/userIdAD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:textColor="@color/black_90"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/profile"
+                app:layout_constraintStart_toStartOf="@id/profile"
+                app:layout_constraintTop_toBottomOf="@id/profile"
+                tools:text="AD: 9999" />
+
+            <TextView
+                android:id="@+id/userIdDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black_90"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/profile"
+                app:layout_constraintStart_toStartOf="@id/profile"
+                app:layout_constraintTop_toBottomOf="@id/userIdAD"
+                tools:text="DT: 9999" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/info_margin_start"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black_90"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/profile"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/info_margin_start"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black_90"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/profile"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                tools:text="anup.ajkerdeal@gmail.com" />
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/info_margin_start"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black_90"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/profile"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                tools:text="01555555555" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/info_margin_start"
+                android:textColor="@color/black_90"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/profile"
+                app:layout_constraintTop_toBottomOf="@id/mobile"
+                tools:text="Kawran bazar, Dhaka" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/workInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E5FFF2"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileInfoLayout">
+
+            <TextView
+                android:id="@+id/workStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black_90"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Current work status" />
+
+            <LinearLayout
+                android:id="@+id/starEndTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workStatus">
+
+                <TextView
+                    android:id="@+id/startWorkTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Start Time:"
+                    android:textColor="@color/black_90"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/endtWorkTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="End Time:"
+                    android:textColor="@color/black_90"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalWorkTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/starEndTimeLayout">
+
+                <TextView
+                    android:id="@+id/workHourStatusT"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Work hour:"
+                    android:textColor="@color/black_90"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/workHourStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black_90"
+                    android:textSize="14sp"
+                    tools:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalWorkBreakTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/totalWorkTimeLayout">
+
+                <TextView
+                    android:id="@+id/worBreakStatus"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Break hour:"
+                    android:textColor="@color/black_90"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/breakHourStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black_90"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/workHourStatus"
+                    tools:text="0" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/locationStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black_90"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalWorkBreakTimeLayout"
+                android:text="Current Location:" />
+
+            <TextView
+                android:id="@+id/currentLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:ellipsize="end"
+                android:maxLines="3"
+                tools:text="Address"
+                android:textColor="@color/black_90"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationStatus"
+                app:layout_constraintStart_toStartOf="@+id/locationStatus"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/workBreakEndBtnLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_stroke"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/workStartEndBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/workInfoLayout"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/workBreakEndImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/cd"
+                android:src="@drawable/ic_start"
+                app:tint="@color/green" />
+
+            <TextView
+                android:id="@+id/workBreakEndBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/text_16"
+                tools:text="Taking Break" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/workStartEndBtn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/workBreakEndBtnLayout"
+            tools:text="Start Work" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/workInfoLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

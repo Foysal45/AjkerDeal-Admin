@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/parent"
+    >
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Write Break Reason"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerBreakReasonType"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_spinner"
+            android:overlapAnchor="false"
+            android:spinnerMode="dropdown"
+            android:theme="@style/custom_spinner_style"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:entries="@array/spinner_array_collection_location" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/cd"
+            app:layout_constraintBottom_toBottomOf="@id/spinnerBreakReasonType"
+            app:layout_constraintEnd_toEndOf="@id/spinnerBreakReasonType"
+            app:layout_constraintTop_toTopOf="@id/spinnerBreakReasonType"
+            app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/breakReasonTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/bg_edit_text"
+        android:gravity="top"
+        android:hint="Break Reason Ex. Lunch Break"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/takingBreakBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green"
+        android:text="Taking Break"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        />
+
+
+</LinearLayout>

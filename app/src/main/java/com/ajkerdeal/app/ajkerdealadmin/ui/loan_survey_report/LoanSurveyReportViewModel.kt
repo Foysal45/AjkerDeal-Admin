@@ -1,0 +1,131 @@
+package com.ajkerdeal.app.ajkerdealadmin.ui.loan_survey_report
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.ajkerdeal.app.ajkerdealadmin.api.models.loan_survey.loansurvey_report.GetCourrierUsersInfoResponse
+import com.ajkerdeal.app.ajkerdealadmin.api.models.loan_survey.loansurvey_report.GetLoanSurveyRequestBody
+import com.ajkerdeal.app.ajkerdealadmin.api.models.loan_survey.loansurvey_report.GetloanSurveyResponseBody
+import com.ajkerdeal.app.ajkerdealadmin.api.models.loan_survey.loansurvey_report.MonthlyTransactionLoanSurveyResponse
+import com.ajkerdeal.app.ajkerdealadmin.repository.AppRepository
+import com.ajkerdeal.app.ajkerdealadmin.utils.ViewState
+import com.haroldadmin.cnradapter.NetworkResponse
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import timber.log.Timber
+
+class LoanSurveyReportViewModel(private val repository: AppRepository) : ViewModel() {
+
+    var startDate = ""
+    var endDate = ""
+
+    val viewState = MutableLiveData<ViewState>(ViewState.NONE)
+    val message = "কোথাও কোনো সমস্যা হচ্ছে, আবার চেষ্টা করুন"
+
+    fun getLoanSurvey(requestBody: GetLoanSurveyRequestBody): LiveData<List<GetloanSurveyResponseBody>> {
+
+        viewState.value = ViewState.ProgressState(true)
+        val responseBody = MutableLiveData<List<GetloanSurveyResponseBody>>()
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val response = repository.GetLoanSurveyI(requestBody)
+            withContext(Dispatchers.Main) {
+                viewState.value = ViewState.ProgressState(false)
+                when (response) {
+                    is NetworkResponse.Success -> {
+                        if (response.body.model != null) {
+                            responseBody.value = response.body.model!!
+                        }
+                    }
+                    is NetworkResponse.ServerError -> {
+                        val message = "দুঃখিত, এই মুহূর্তে আমাদের সার্ভার কানেকশনে সমস্যা হচ্ছে, কিছুক্ষণ পর আবার চেষ্টা করুন"
+                        viewState.value = ViewState.ShowMessage(message)
+                    }
+                    is NetworkResponse.NetworkError -> {
+                        val message = "দুঃখিত, এই মুহূর্তে আপনার ইন্টারনেট কানেকশনে সমস্যা হচ্ছে"
+                        viewState.value = ViewState.ShowMessage(message)
+                    }
+                    is NetworkResponse.UnknownError -> {
+                        val message = "কোথাও কোনো সমস্যা হচ্ছে, আবার চেষ্টা করুন"
+                        viewState.value = ViewState.ShowMessage(message)
+                        Timber.d(response.error)
+                    }
+                }
+            }
+        }
+        return responseBody
+    }
+
+
+    fun getCourierUserInfo(couriierUserId: Int): LiveData<GetCourrierUsersInfoResponse> {
+
+        viewState.value = com.ajkerdeal.app.ajkerdealadmin.utils.ViewState.ProgressState(true)
+        val responseBody = MutableLiveData<GetCourrierUsersInfoResponse>()
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val response = repository.GetCourierUserInfo(couriierUserId)
+            withContext(Dispatchers.Main) {
+                viewState.value = com.ajkerdeal.app.ajkerdealadmin.utils.ViewState.ProgressState(false)
+                when (response) {
+                    is NetworkResponse.Success -> {
+                        if (response.body.model != null) {
+                            responseBody.value = response.body.model!!
+                        }
+                    }
+                    is NetworkResponse.ServerError -> {
+                        //val message = "দুঃখিত, এই মুহূর্তে আমাদের সার্ভার কানেকশনে সমস্যা হচ্ছে, কিছুক্ষণ পর আবার চেষ্টা করুন"
+                        //viewState.value = ViewState.ShowMessage(message)
+                    }
+                    is NetworkResponse.NetworkError -> {
+                        //val message = "দুঃখিত, এই মুহূর্তে আপনার ইন্টারনেট কানেকশনে সমস্যা হচ্ছে"
+                        //viewState.value = ViewState.ShowMessage(message)
+                    }
+                    is NetworkResponse.UnknownError -> {
+                        //val message = "কোথাও কোনো সমস্যা হচ্ছে, আবার চেষ্টা করুন"
+                        //viewState.value = ViewState.ShowMessage(message)
+                        Timber.d(response.error)
+                    }
+                }
+            }
+        }
+        return responseBody
+    }
+    fun MonthWiseTotalCollectionAmount(couriierUserId: Int): LiveData<List<MonthlyTransactionLoanSurveyResponse>> {
+
+        viewState.value = com.ajkerdeal.app.ajkerdealadmin.utils.ViewState.ProgressState(true)
+        val responseBody = MutableLiveData<List<MonthlyTransactionLoanSurveyResponse>>()
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val response = repository.MonthWiseTotalCollectionAmount(couriierUserId)
+            withContext(Dispatchers.Main) {
+                viewState.value = com.ajkerdeal.app.ajkerdealadmin.utils.ViewState.ProgressState(false)
+                when (response) {
+                    is NetworkResponse.Success -> {
+                        if (response.body.model != null) {
+                            responseBody.value = response.body.model!!
+                        }
+                    }
+                    is NetworkResponse.ServerError -> {
+                        //val message = "দুঃখিত, এই মুহূর্তে আমাদের সার্ভার কানেকশনে সমস্যা হচ্ছে, কিছুক্ষণ পর আবার চেষ্টা করুন"
+                        //viewState.value = ViewState.ShowMessage(message)
+                    }
+                    is NetworkResponse.NetworkError -> {
+                        //val message = "দুঃখিত, এই মুহূর্তে আপনার ইন্টারনেট কানেকশনে সমস্যা হচ্ছে"
+                        //viewState.value = ViewState.ShowMessage(message)
+                    }
+                    is NetworkResponse.UnknownError -> {
+                        //val message = "কোথাও কোনো সমস্যা হচ্ছে, আবার চেষ্টা করুন"
+                        //viewState.value = ViewState.ShowMessage(message)
+                        Timber.d(response.error)
+                    }
+                }
+            }
+        }
+        return responseBody
+    }
+
+
+
+}

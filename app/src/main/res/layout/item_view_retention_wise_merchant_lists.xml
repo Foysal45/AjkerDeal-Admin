@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:contentPadding="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/merchantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Sifat test Ltd." />
+
+        <TextView
+            android:id="@+id/merchantId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="ID: 1" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/separator"
+            app:layout_constraintTop_toBottomOf="@id/merchantName" />
+
+        <TextView
+            android:id="@+id/totalOrderKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Order"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/totalOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="@+id/totalOrderKey"
+            app:layout_constraintStart_toStartOf="@+id/totalOrderKey"
+            app:layout_constraintTop_toBottomOf="@+id/totalOrderKey"
+            tools:text="300" />
+
+        <TextView
+            android:id="@+id/totalComplainKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Complain"
+            android:textColor="@color/black_80"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_14"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/totalOrderKey"
+            app:layout_constraintTop_toBottomOf="@+id/separator"/>
+
+        <TextView
+            android:id="@+id/totalComplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="@+id/totalComplainKey"
+            app:layout_constraintStart_toStartOf="@+id/totalComplainKey"
+            app:layout_constraintTop_toBottomOf="@+id/totalComplainKey"
+            android:text="36" />
+
+
+        <TextView
+            android:id="@+id/lastOrderKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Last Order"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/totalComplainKey"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/lastOrderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintStart_toStartOf="@+id/lastOrderKey"
+            app:layout_constraintEnd_toEndOf="@+id/lastOrderKey"
+            app:layout_constraintTop_toBottomOf="@+id/lastOrderKey"
+            tools:text="5 May 2021" />
+
+        <TextView
+            android:id="@+id/mobileNumberKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mobileNumberLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:background="@drawable/bg_fb_redirect"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumberKey"
+            android:layout_marginEnd="0dp"
+            >
+
+            <TextView
+                android:id="@+id/mobileNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:text="01772248149"
+                android:textSize="12sp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:paddingBottom="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mobileLogo"
+                />
+
+            <ImageView
+                android:id="@+id/mobileLogo"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_call"
+                android:contentDescription="@string/cd"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/addressKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumberLayout" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="4"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toStartOf="@+id/loanUpdateReturnCountBtnLayout"
+            app:layout_constraintStart_toStartOf="@+id/addressKey"
+            app:layout_constraintTop_toBottomOf="@+id/addressKey"
+            tools:text="Sumona Goni Trade Centre Plot No-02, Level, 05 Panthapath, Dhaka 1215" />
+
+        <LinearLayout
+            android:id="@+id/loanUpdateReturnCountBtnLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/bottomBtnLayout"
+            app:layout_constraintEnd_toEndOf="@+id/mobileNumberLayout"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumberLayout">
+
+            <TextView
+                android:id="@+id/applyLoanTV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@color/blue_100"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="Loan"
+                android:textAllCaps="false"
+                android:textColor="@color/black_80"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/returnCountBtn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/blue_100"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="Return"
+                android:textAllCaps="false"
+                android:textColor="@color/black_80"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomBtnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address"
+            android:gravity="center_vertical"
+            >
+
+            <Button
+                android:id="@+id/quickBookingBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:backgroundTint="@color/light_blue"
+                android:text="Quick Booking"
+                android:textSize="12sp"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/complainBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/brown_900"
+                android:text="Complain"
+                android:textSize="12sp"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                android:id="@+id/visitInfoBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/teal_900"
+                android:text="Visited"
+                android:textSize="12sp"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                android:id="@+id/callInfoBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:padding="0dp"
+                android:text="Called"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

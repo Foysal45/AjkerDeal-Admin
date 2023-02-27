@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Session"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/sessionCount"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sessionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/session"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="(99999)" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/separator"
+        app:layout_constraintTop_toBottomOf="@id/session" />
+
+
+    <TextView
+        android:id="@+id/key1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Work start"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/workStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key1"
+        tools:text="10:00:00 AM" />
+
+    <TextView
+        android:id="@+id/key2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Work end"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/workEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key1"
+        tools:text="06:00:00 PM"/>
+
+    <TextView
+        android:id="@+id/key3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Work summary"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workEndTime" />
+
+    <TextView
+        android:id="@+id/workSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:ellipsize="end"
+        android:padding="2dp"
+        android:textColor="@color/black_90"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key3"
+        tools:text="@tools:sample/lorem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

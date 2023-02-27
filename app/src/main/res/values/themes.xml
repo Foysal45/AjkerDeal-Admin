@@ -1,0 +1,123 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+    </style>
+
+    <style name="custom_spinner_style" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/colorText_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="custom_spinner_style2" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="custom_spinner_style_retention" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/colorText_primary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_bg</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/black_100</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog1" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme1" parent="BaseBottomSheetDialog1">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/black_100</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog2" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme2" parent="BaseBottomSheetDialog2">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/black_100</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="CustomMaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <!-- Header Layout -->
+        <!--<item name="materialCalendarHeaderLayout">@style/customHeaderLayout</item>-->
+        <!-- Header title -->
+        <item name="materialCalendarHeaderTitle">@style/customHeaderTitle</item>
+        <!-- Header selection title -->
+        <!--<item name="materialCalendarHeaderSelection">@style/CustomHeaderSelection</item>-->
+    </style>
+
+    <style name="customHeaderTitle" parent="@style/Widget.MaterialComponents.MaterialCalendar.HeaderTitle">
+        <item name="android:textAppearance">@style/customTextAppearance</item>
+        <item name="autoSizeMaxTextSize">18sp</item>
+    </style>
+
+    <style name="customTextAppearance" parent="@style/TextAppearance.MaterialComponents.Overline">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_100</item>
+    </style>
+
+    <style name="customHeaderLayout" parent="@style/Widget.MaterialComponents.MaterialCalendar.HeaderLayout">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminateTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

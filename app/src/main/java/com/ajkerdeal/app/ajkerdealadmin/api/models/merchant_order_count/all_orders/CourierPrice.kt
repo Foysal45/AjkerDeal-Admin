@@ -1,0 +1,29 @@
+package com.ajkerdeal.app.ajkerdealadmin.api.models.merchant_order_count.all_orders
+
+
+import com.google.gson.annotations.SerializedName
+
+data class CourierPrice(
+    @SerializedName("collectionAmount")
+    var collectionAmount: Double? = null,
+    @SerializedName("deliveryCharge")
+    var deliveryCharge: Double? = null,
+    @SerializedName("breakableCharge")
+    var breakableCharge: Double? = null,
+    @SerializedName("codCharge")
+    var codCharge: Double? = null,
+    @SerializedName("collectionCharge")
+    var collectionCharge: Double? = null,
+    @SerializedName("returnCharge")
+    var returnCharge: Double? = null,
+    @SerializedName("packagingName")
+    var packagingName: String? = null,
+    @SerializedName("packagingCharge")
+    var packagingCharge: Double? = null,
+    @SerializedName("officeDrop")
+    var officeDrop: Boolean = false,
+    @SerializedName("totalServiceCharge")
+    var totalServiceCharge: Double? = null,
+    @SerializedName("totalAmount")
+    var totalAmount: Double? = null
+)

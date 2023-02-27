@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_view_dashboard_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@drawable/bg_stroke1"
+        >
+
+        <TextView
+            android:id="@+id/item_view_dashboard_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#73B4C8"
+            android:textSize="@dimen/dashboard_count_size"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="৳ 783" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black_80"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/item_view_dashboard_count_tv"
+            app:layout_constraintBottom_toBottomOf="@id/item_view_dashboard_count_tv"
+            tools:text="ডেলিভারি হয়েছে" />
+
+        <TextView
+            android:id="@+id/item_view_dashboard_msg_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_14"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_view_dashboard_count_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="৯টি সার্ভিসের বিল" />
+
+        <!--<ImageView
+            android:id="@+id/item_view_dashboard_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cd"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@drawable/ic_payment_done"
+            />-->
+
+        <!-- <ImageView
+            android:id="@+id/item_view_dashboard_design"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_dashboard_design_1" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+

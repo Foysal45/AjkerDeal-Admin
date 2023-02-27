@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent"
+    android:orientation="vertical"
+    android:padding="16sp">
+
+
+    <TextView
+        android:id="@+id/topTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot to end session last day?  "
+        android:textColor="@color/colorText_primary"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please, Select Last Day Session End Time"
+        android:textColor="@color/colorText_primary"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/timePickerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="16dp"
+        >
+
+        <TextView
+            android:id="@+id/timeRangePicker"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Select time"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black_90"
+            android:textColorHint="@color/gray_500"
+            android:textSize="@dimen/text_14"
+            app:drawableEndCompat="@drawable/ic_clock_update"
+            app:drawableTint="@color/gray_500" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green"
+        android:text="END"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        />
+
+
+</LinearLayout>

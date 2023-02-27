@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/telesales_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_sheet_curved_bg"
+                android:padding="16dp"
+                android:text="Company Details "
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/personNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:gravity="start"
+                    android:text="Contact Person "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/personName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contractMobileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Mobile "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mobileText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="015" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/alterMobileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="Contact Alter Mobile"
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/altermobileText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="015" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Address "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/addressText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Address" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Email Address "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/emailAddressText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="abc@abc.com" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/joinDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+
+                    android:maxLines="2"
+                    android:text="Join date "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/joinDateText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="21 Nov 2021" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CompanyNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Company Name "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/CompanyNameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="ABC Company" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/facebookUrlLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="FaceBook URL "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/FbUrlText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="http://url.com" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/webUrlLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Web URL "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/WebUrlText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="http://url.com" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/categoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Category "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/CategoryText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="http://url.com" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bankAccountNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Bank Account Name "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/BancAccountNameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var11"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="The Bank LTD" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bankAccountNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Bank Account Number "
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/BankAccountNumberText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var12"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="00xxxxxx0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bankNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Bank Name "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/BankText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var13"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="00xxxxxx0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/branchNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Branch Name "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/branchNameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var14"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="The Bank LTD" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/genderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Gender "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var15"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/genderText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var15"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="male" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/merchantReviewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_var16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".40" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:maxLines="2"
+                    android:text="Merchant Review "
+                    android:textColor="@color/black"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_var16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/merchantReviewText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_var16"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="merchant Review" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

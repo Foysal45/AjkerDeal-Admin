@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item android:title="@string/menu_group1_title">
+            <menu>
+                <item
+                    android:id="@+id/nav_dashboard"
+                    android:icon="@drawable/ic_home"
+                    android:title="@string/dashboard" />
+                <item
+                    android:id="@+id/nav_leave"
+                    android:icon="@drawable/ic_account_badge_alert"
+                    android:title="@string/leave" />
+                <item
+                    android:id="@+id/nav_remainder"
+                    android:icon="@drawable/ic_clock_update"
+                    android:title="@string/remainder" />
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_user"
+                    android:title="@string/profile"
+                    android:visible="false" />
+                <item
+                    android:id="@+id/nav_key_word_survey"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/key_word_survey" />
+
+                <item
+                    android:id="@+id/nav_complain_order_history"
+                    android:icon="@drawable/ic_track"
+                    android:title="Complain/Order History"
+                    android:visible="true" />
+            </menu>
+        </item>
+    </group>
+    <group
+        android:id="@+id/group6"
+        android:checkableBehavior="single">
+        <item android:title="@string/menu_group6_title">
+            <menu>
+                <item
+                    android:id="@+id/nav_chat"
+                    android:icon="@drawable/ic_chat"
+                    android:title="Chat"
+                    android:visible="true" />
+                <item
+                    android:id="@+id/nav_chat_sr"
+                    android:icon="@drawable/ic_chat"
+                    android:title="SR Chat History"
+                    android:visible="false" />
+                <item
+                    android:id="@+id/nav_chat_rider"
+                    android:icon="@drawable/ic_chat"
+                    android:title="Riders Chat History"
+                    android:visible="false" />
+                <item
+                    android:id="@+id/nav_chat_operation"
+                    android:icon="@drawable/ic_chat"
+                    android:title="Return/Accounts/Complain"
+                    android:visible="false" />
+                <item
+                    android:id="@+id/contact_info"
+                    android:icon="@drawable/ic_call"
+                    android:title="All Contacts"
+                    android:visible="true" />
+            </menu>
+        </item>
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item android:title="@string/menu_group2_title">
+            <menu>
+                <item
+                    android:id="@+id/nav_operation_menu"
+                    android:icon="@drawable/ic_qrcode"
+                    android:title="@string/operation_menu" />
+            </menu>
+        </item>
+    </group>
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item android:title="@string/menu_group3_title">
+            <menu>
+                <item
+                    android:id="@+id/nav_dt_complain_list"
+                    android:icon="@drawable/ic_complain"
+                    android:title="@string/complain" />
+                <item
+                    android:id="@+id/nav_retention_merchant"
+                    android:icon="@drawable/ic_clipboard_list"
+                    android:title="@string/retention" />
+                <item
+                    android:id="@+id/merchantInformation"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/merchant_info" />
+                <item
+                    android:id="@+id/telesalesMenu"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/telesales" />
+
+            </menu>
+        </item>
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item android:title="@string/menu_group4_title">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_attendance_report"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/report_attendance" />
+
+                <item
+                    android:id="@+id/nav_retention_report"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/retention_report" />
+                <item
+                    android:id="@+id/nav_order_report"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/order_report" />
+                <item
+                    android:id="@+id/complainReportFragment"
+                    android:icon="@drawable/ic_report"
+                    android:title="Complain Report"
+                    android:visible="true" />
+                <item
+                    android:id="@+id/loanSurveyReportFragment"
+                    android:icon="@drawable/ic_report"
+                    android:title="Loan Survey Report" />
+                <item
+                    android:id="@+id/nav_instant_payment_information"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/instant_payment_information" />
+
+                <item
+                    android:id="@+id/nav_leave_report"
+                    android:icon="@drawable/ic_report"
+                    android:title="@string/report_leave" />
+                <item
+                    android:id="@+id/nav_webview"
+                    android:icon="@drawable/ic_clock_update"
+                    android:title="@string/webView"
+                    android:visible="false" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="@string/logout"
+                    android:visible="true" />
+            </menu>
+        </item>
+    </group>
+</menu>

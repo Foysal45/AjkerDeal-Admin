@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">Ajkerdeal Admin</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="default_notification_channel_id">Promotion</string>
+    <string name="default_notification_channel_color">Color</string>
+    <string name="notification_channel_id_session">Session</string>
+    <string name="notification_channel_name_session">Session</string>
+    <string name="notification_channel_des_session">Session description</string>
+
+    <string name="notification_channel_id_reminder">Reminder</string>
+    <string name="notification_channel_name_reminder">Reminder</string>
+    <string name="notification_channel_description_reminder">Reminder notification channel</string>
+
+    <string name="notification_channel_chat">Chat</string>
+    <string name="notification_channel_chat_name">Chat</string>
+
+    <string name="cd">image</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="complain">DT Complain</string>
+    <string name="srChatDetails">SR Chat History</string>
+    <string name="riderChatDetails">Rider Chat History</string>
+    <string name="report_attendance">Attendance Report</string>
+    <string name="report_leave">Leave Report</string>
+    <string name="report_details_leave">Leave Report Details</string>
+    <string name="key_word_survey">Key Word Survey</string>
+    <string name="notification">Notification</string>
+    <string name="order_report">Order Report</string>
+    <string name="loan_survey">Loan Survey</string>
+    <string name="instant_payment_information">Instant Payment Information</string>
+    <string name="retention_report">Retention Report</string>
+    <string name="telesales">Tele Sales (Lead)</string>
+    <string name="merchant_info">Merchant Information</string>
+    <string name="order_wise_merchant">Order merchants</string>
+    <string name="order_details">Merchant order details</string>
+    <string name="leave">Employee Leave</string>
+    <string name="retention">Merchant Followup</string>
+    <string name="remainder">Remainder</string>
+    <string name="operation">Hub Transfer</string>
+    <string name="operation_menu">DT Status Update</string>
+    <string name="webView">Webview</string>
+    <string name="logout">Logout</string>
+    <string name="submit">সাবমিট</string>
+    <string-array name="pick_options">
+        <item>"বেছে নিন"</item>
+    </string-array>
+
+    <string name="wait">অপেক্ষা করুন</string>
+    <string-array name="spinner_array_collection_location">
+        <item>Select Item</item>
+    </string-array>
+    <string name="select_dist">জেলা নির্বাচন করুন</string>
+    <string name="select_thana">থানা নির্বাচন করুন</string>
+
+    <string-array name="hub_from">
+        <item>From Hub</item>
+    </string-array>
+    <string-array name="hub_to">
+        <item>To Hub</item>
+    </string-array>
+
+    <string name="instruction">নির্দেশনা</string>
+    <string name="ok">ঠিক আছে</string>
+    <string name="cancel">ক্যানসেল</string>
+    <string name="yes_delete">হ্যাঁ, ডিলিট</string>
+
+    <string name="search_hint">Merchant Name or Area</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_group1_title">Admin user</string>
+    <string name="menu_group2_title">DT Operation</string>
+    <string name="menu_group3_title">DT Retention</string>
+    <string name="menu_group4_title">Report</string>
+    <string name="menu_group6_title">Contact</string>
+
+    <string-array name="filter">
+        <item>Filter</item>
+    </string-array>
+
+    <string-array name="spinner_array_advance">
+        <item>Advance (2 D)</item>
+        <item>Advance (3 D)</item>
+        <item>Advance (4 D)</item>
+        <item>Advance (5 D)</item>
+        <item>Advance (6 D)</item>
+        <item>Advance (7 D)</item>
+    </string-array>
+
+    <string-array name="spinner_array_back">
+        <item>Back (2 D)</item>
+        <item>Back (3 D)</item>
+        <item>Back (4 D)</item>
+        <item>Back (5 D)</item>
+        <item>Back (6 D)</item>
+        <item>Back (7 D)</item>
+    </string-array>
+
+    <string-array name="spinner_array_employee">
+        <item>0-Emerging</item>
+        <item>1-VIP</item>
+        <item>2-Manager</item>
+        <item>4-Sales</item>
+        <item>6-CRM</item>
+        <item>7-Fulfillment</item>
+        <item>8-Accounts</item>
+        <item>9-Social Media</item>
+        <item>10-Content</item>
+        <item>11-IT</item>
+        <item>12-Merchandising</item>
+        <item>13-Service Quality Analyst</item>
+    </string-array>
+
+    <string-array name="pickup_district">
+        <item>"জেলা নির্বাচন করুন"</item>
+    </string-array>
+
+    <string name="why_location_required">To log operation process and save employee attendance, allow Ajkerdeal Admin to use your location data in the background.</string>
+    <string name="how_location_used">Ajkerdeal Admin will use location data to tag operation status changes and employee attendance. App will not collect any location data when the app is closed.</string>
+    <string name="location_features">All the features that use location in the background\n> DT operations\n> DT merchant followup\n> Employee attendance</string>
+</resources>
